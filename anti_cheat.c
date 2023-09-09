@@ -133,6 +133,8 @@ void findCFiles(const char *dir) {
             }
             else
             {
+                if (extension && strcmp(extension, ".h") == 0)
+                    continue;
                 printf("______________\n");
                 printf("| other file | Found file: %s/%s (i'll not delete it)\n", dir, entry->d_name);
             }
