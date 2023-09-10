@@ -6,16 +6,16 @@
 /*   By: pepie <pepie@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 23:26:21 by pepie             #+#    #+#             */
-/*   Updated: 2023/09/09 23:26:29 by pepie            ###   ########.fr       */
+/*   Updated: 2023/09/10 12:40:23 by pepie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include <stdlib.h>
-#include <string.h>
+#include <bsd/string.h>
 #include <dirent.h>
 #include <limits.h>
 #include <unistd.h>
-
+#include <stdio.h>
 
 int verify_printf(FILE *file)
 {
@@ -144,7 +144,7 @@ void findCFiles(const char *dir) {
     closedir(dp);
 }
 
-int main(int argc, char **argv)
+int main()
 {
     char cwd[PATH_MAX];
 
@@ -159,4 +159,3 @@ int main(int argc, char **argv)
 
     return (0);
 }
-
